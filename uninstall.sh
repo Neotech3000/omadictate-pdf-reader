@@ -3,9 +3,10 @@ set -euo pipefail
 
 APP_DIR="${HOME}/.local/share/omadictate-pdf-reader"
 BIN_FILE="${HOME}/.local/bin/omadictate-pdf-reader"
-DESKTOP_FILE="${HOME}/.local/share/applications/omadictate-pdf-reader.desktop"
+DESKTOP_FILE="${HOME}/.local/share/applications/io.github.neotech3000.omadictatepdfreader.desktop"
+OLD_DESKTOP_FILE="${HOME}/.local/share/applications/omadictate-pdf-reader.desktop"
 
-rm -f -- "$BIN_FILE" "$DESKTOP_FILE"
+rm -f -- "$BIN_FILE" "$DESKTOP_FILE" "$OLD_DESKTOP_FILE"
 if [[ -d "$APP_DIR" && "$APP_DIR" == "$HOME/.local/share/omadictate-pdf-reader" ]]; then
   rm -rf -- "$APP_DIR"
 fi

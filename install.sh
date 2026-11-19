@@ -5,6 +5,9 @@ ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 APP_DIR="${HOME}/.local/share/omadictate-pdf-reader"
 BIN_DIR="${HOME}/.local/bin"
 DESKTOP_DIR="${HOME}/.local/share/applications"
+DESKTOP_ID="io.github.neotech3000.omadictatepdfreader"
+DESKTOP_FILE="$DESKTOP_DIR/$DESKTOP_ID.desktop"
+OLD_DESKTOP_FILE="$DESKTOP_DIR/omadictate-pdf-reader.desktop"
 PYTHON="${PYTHON:-/usr/bin/python3}"
 VENV_DIR="${OMADICTATE_VENV:-$APP_DIR/venv}"
 
@@ -52,7 +55,11 @@ Terminal=false
 Categories=Office;
 Keywords=PDF;read aloud;speech;accessibility;
 StartupNotify=true
+StartupWMClass=$DESKTOP_ID
 EOF
+
+mv -f -- "$DESKTOP_DIR/omadictate-pdf-reader.desktop" "$DESKTOP_FILE"
+rm -f -- "$OLD_DESKTOP_FILE"
 
 if command -v update-desktop-database >/dev/null 2>&1; then
   update-desktop-database "$DESKTOP_DIR" >/dev/null 2>&1 || true
