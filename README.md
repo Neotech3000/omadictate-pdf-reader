@@ -2,6 +2,10 @@
 
 An Omarchy bar launcher and GTK 4 PDF reader. It offers ten Microsoft Edge neural voices, live word/sentence highlighting, chart/figure and line-number skip filters, Flea file picking, and drag-and-drop.
 
+<p align="center"><img src="preview.png" alt="Omadictate PDF reader app icon" width="256"></p>
+
+The app uses the supplied `app-icon-for-omadictate.jpg`, cropped to a square PNG for desktop icon compatibility.
+
 ## Install on Omarchy
 
 The plugin repository contains the launcher; the separate installer sets up the desktop app and its Python environment. The plugin manager does **not** run install scripts.

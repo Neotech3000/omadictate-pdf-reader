@@ -14,8 +14,18 @@ BarWidget {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "PDF"
+    text: ""
+    hasVisualContent: true
     tooltipText: "Open Omadictate PDF reader"
+
+    Image {
+      anchors.centerIn: parent
+      width: 18
+      height: 18
+      source: Qt.resolvedUrl("assets/omadictate-pdf-reader.png")
+      fillMode: Image.PreserveAspectFit
+      smooth: true
+    }
 
     onPressed: function(buttonCode) {
       if (buttonCode === Qt.LeftButton) {

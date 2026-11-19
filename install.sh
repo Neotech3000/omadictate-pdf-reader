@@ -27,6 +27,7 @@ mkdir -p "$APP_DIR" "$BIN_DIR" "$DESKTOP_DIR"
 install -m 644 "$ROOT_DIR/app/pdf-reader-app.py" "$APP_DIR/pdf-reader-app.py"
 install -m 644 "$ROOT_DIR/app/pdf_read_aloud_engine.py" "$APP_DIR/pdf_read_aloud_engine.py"
 install -m 644 "$ROOT_DIR/app/requirements.txt" "$APP_DIR/requirements.txt"
+install -m 644 "$ROOT_DIR/assets/omadictate-pdf-reader.png" "$APP_DIR/app-icon.png"
 
 if [[ ! -x "$VENV_DIR/bin/python" ]]; then
   "$PYTHON" -m venv --system-site-packages "$VENV_DIR"
@@ -46,7 +47,7 @@ Name=Omadictate PDF reader
 Comment=Read PDFs aloud with synchronized highlights
 Exec=$BIN_DIR/omadictate-pdf-reader
 TryExec=$BIN_DIR/omadictate-pdf-reader
-Icon=application-pdf
+Icon=$APP_DIR/app-icon.png
 Terminal=false
 Categories=Office;
 Keywords=PDF;read aloud;speech;accessibility;
