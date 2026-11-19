@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "neotech3000.omadictate-pdf-reader",
+  "name": "Omadictate PDF reader",
+  "version": "1.0.0",
+  "author": "Enoch Lawrence",
+  "license": "AGPL-3.0-or-later",
+  "repository": "https://github.com/Neotech3000/omadictate-pdf-reader",
+  "homepage": "https://github.com/Neotech3000/omadictate-pdf-reader",
+  "description": "Open a PDF reader with ten neural voices, synchronized word or sentence highlights, and optional chart and line-number skipping.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Omadictate PDF reader",
+    "description": "Open the neural PDF reader.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {},
+    "schema": []
+  }
+}
